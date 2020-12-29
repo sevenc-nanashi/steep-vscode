@@ -39,7 +39,7 @@
 			"title": "Steep",
 			"properties": {
 				"steep.loglevel": {
-					"markdownDescription": "The value for `--log-level` option. You can see the output in `output` tab.",
+					"markdownDescription": "The value for `--log-level` option. You can see the output in the `output` tab.",
 					"type": "string",
 					"enum": [
 						"error",
@@ -48,6 +48,12 @@
 						"debug"
 					],
 					"default": "info"
+				},
+				"steep.executable": {
+					"markdownDescription": "Path to executable to start Steep. Relative paths are from project workspace. Leave it empty to start Steep by `bundle exec steep`.",
+					"type": "string",
+					"examples": ["", "bin/steep", "_scripts/steep"],
+					"default": ""
 				}
 			}
 		}
